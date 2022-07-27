@@ -13,7 +13,7 @@ body{
 div{
     position: relative;
     text-align: center;
-    color: chartreuse;
+    color: black;
 
 }
 
@@ -47,5 +47,6 @@ table, th, td {
     color: black;
   }
 textarea{
-    background-color: black;
+    color:black;
+    background-color: white;
 }
