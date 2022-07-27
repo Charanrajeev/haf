@@ -1,7 +1,7 @@
 *{
     position: relative;
     box-sizing: content-box;
-    color: black;
+    color: antiquewhite;
     height: 50px;
 }
 body{
@@ -46,4 +46,3 @@ table, th, td {
  input,button,textarea{
     color: black;
   }
-
