@@ -1,7 +1,7 @@
 *{
     position: relative;
     box-sizing: content-box;
-    color: chartreuse;
+    color: black;
     height: 50px;
 }
 body{
@@ -13,7 +13,7 @@ body{
 div{
     position: relative;
     text-align: center;
-    color: black;
+    color: chartreuse;
 
 }
 
