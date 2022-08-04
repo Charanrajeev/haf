@@ -62,6 +62,7 @@ ul {
     padding: 5px;
     font-family: sans-serif;
     font-size: medium;
+   width:auto;
     
 }
 #welcome:hover{
