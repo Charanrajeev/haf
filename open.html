@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin page</title>
+    </head>
+    <body>
+        <hr>
+        <br>
+        <h2>Here you can manage everything </h2>
+        <h5>dashboad</h5>
+        <a href="https://script.google.com/macros/s/AKfycbzIULy3Irg-T48ZZucWuAiR3UK7fMz_WxNDvFl_jJonKWbGL4Id6PQ76-HLYuR2copdRg/exec"><button type="button">All prayer Requests </button></a>
+    
+
+        <h1 id="msg"></h1>
+        <form>
+            <input type="text" name="date" placeholder='ex.28.05.2022'><br><br>
+            <input type="text" name="prayer" placeholder='ex.fasting'><br><br>
+            <input type="text" name="place" placeholder='ex.gangaram'><br><br>
+            <input type="text" name="time" placeholder='ex.fasting'><br><br>
+            
+
+            <input type="submit" id="sub">
+        </form>
+        <script>
+            let form = document.querySelector("form");
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                document.querySelector("#sub").value = "Submiting..";
+                let data = new FormData(form);
+                fetch('https://script.google.com/macros/s/AKfycbwyb_5wOihGmGj65m0Jz9IAVra3MrxNhYQU1ISnZZ_hLPo_tYXFPyPnS2Usu4M8YNZPqQ/exec', {
+                        method: "POST",
+                        body: data
+                    })
+                    .then(res => res.text())
+                    .then(data => {
+                        document.querySelector("#msg").innerHTML = data;
+                        document.querySelector("#sub").value = "Submit"
+                    });
+            })
+        </script>
+    
+    </body>
+</html>
